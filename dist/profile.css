@@ -1,6 +1,6 @@
-.smilinno-brand{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-body),sans-serif;font-size:14px;font-weight:700;letter-spacing:.035em}
-.smilinno-logo{display:block;width:34px;height:22px;background:currentColor;-webkit-mask:url('/logos/smilinno.png') center/contain no-repeat;mask:url('/logos/smilinno.png') center/contain no-repeat}
-.smilinno-brand .hero-opening-word{display:inline-flex;align-items:center}
+.fanap-brand{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-body),sans-serif;font-size:14px;font-weight:700;letter-spacing:.035em}
+.fanap-logo{display:block;width:22px;height:26px;background:currentColor;-webkit-mask:url('/logos/fanap.svg') center/contain no-repeat;mask:url('/logos/fanap.svg') center/contain no-repeat}
+.fanap-brand .hero-opening-word{display:inline-flex;align-items:center}
 /* Spread the nearby Middle East and Caucasus labels around their globe markers. */
 .about-cobe-marker-label[data-place-id][data-place-id="armenia"]{--label-x:36px;--label-y:-12px}
 .about-cobe-marker-label[data-place-id][data-place-id="turkey"]{--label-x:-72px;--label-y:-36px}
