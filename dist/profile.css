@@ -1,4 +1,4 @@
-.fanap-brand{display:inline-flex;align-items:center;gap:13px;font-family:var(--font-body),sans-serif;font-size:18.2px;font-weight:700;letter-spacing:.035em}
+.fanap-brand{display:inline-flex;align-items:center;gap:11.7px;font-family:var(--font-body),sans-serif;font-size:18.2px;font-weight:700;letter-spacing:.035em}
 .fanap-logo{display:block;width:34.32px;height:40.56px;background:currentColor;-webkit-mask:url('/logos/fanap.svg') center/contain no-repeat;mask:url('/logos/fanap.svg') center/contain no-repeat}
 .fanap-brand .hero-opening-word{display:inline-flex;align-items:center}
 /* Spread the nearby Middle East and Caucasus labels around their globe markers. */
