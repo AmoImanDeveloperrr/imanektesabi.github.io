@@ -6,7 +6,7 @@ document.addEventListener('click', event => {
   const url = new URL(link.href, location.href);
   if (url.origin !== location.origin || url.pathname === location.pathname) return;
   const originalRoutes = ['/play/gravity', '/play/codex-pet', '/play/node-builder', '/writing/part-time-job-or-build-career', '/writing/autodesk-internship-experience'];
-  if (originalRoutes.includes(url.pathname.replace(/\/$/, ''))) url.href = 'https://www.rishiashar.com' + url.pathname + url.search + url.hash;
+  if (originalRoutes.includes(url.pathname.replace(/\/$/, ''))) url.href = '/';
   event.preventDefault();
   event.stopImmediatePropagation();
   location.assign(url.href);
