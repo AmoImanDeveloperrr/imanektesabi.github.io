@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <title>Iman Ektesabi</title>
+  <defs>
+    <linearGradient id="ai-spark-gradient" x1="4" y1="5" x2="29" y2="28" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff375f" />
+      <stop offset="0.2" stop-color="#ff9f0a" />
+      <stop offset="0.37" stop-color="#ffd60a" />
+      <stop offset="0.56" stop-color="#30d158" />
+      <stop offset="0.76" stop-color="#64d2ff" />
+      <stop offset="1" stop-color="#bf5af2" />
+    </linearGradient>
+    <radialGradient id="ai-spark-sheen" cx="10.4" cy="8.8" r="17.6" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.86" />
+      <stop offset="0.34" stop-color="#ffffff" stop-opacity="0.2" />
+      <stop offset="0.72" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <path
+    d="M16 1.8C17.5 8.1 21.9 12.7 30.2 16C21.9 19.3 17.5 23.9 16 30.2C14.5 23.9 10.1 19.3 1.8 16C10.1 12.7 14.5 8.1 16 1.8Z"
+    fill="url(#ai-spark-gradient)"
+    stroke="#111317"
+    stroke-linejoin="round"
+    stroke-width="1.25"
+  />
+  <path
+    d="M16 1.8C17.5 8.1 21.9 12.7 30.2 16C21.9 19.3 17.5 23.9 16 30.2C14.5 23.9 10.1 19.3 1.8 16C10.1 12.7 14.5 8.1 16 1.8Z"
+    fill="url(#ai-spark-sheen)"
+  />
+</svg>

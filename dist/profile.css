@@ -1,0 +1,141 @@
+.smilinno-brand{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-body),sans-serif;font-size:14px;font-weight:700;letter-spacing:.035em}
+.smilinno-logo{display:block;width:34px;height:22px;background:currentColor;-webkit-mask:url('/logos/smilinno.png') center/contain no-repeat;mask:url('/logos/smilinno.png') center/contain no-repeat}
+.smilinno-brand .hero-opening-word{display:inline-flex;align-items:center}
+/* Spread the nearby Middle East and Caucasus labels around their globe markers. */
+.about-cobe-marker-label[data-place-id][data-place-id="armenia"]{--label-x:36px;--label-y:-12px}
+.about-cobe-marker-label[data-place-id][data-place-id="turkey"]{--label-x:-72px;--label-y:-36px}
+.about-cobe-marker-label[data-place-id][data-place-id="iraq"]{--label-x:-68px;--label-y:6px}
+.about-cobe-marker-label[data-place-id][data-place-id="dubai"]{--label-x:72px;--label-y:-12px}
+.about-cobe-marker-label[data-place-id][data-place-id="saudi-arabia"]{--label-x:0px;--label-y:48px}
+@media(max-width:520px){
+ .about-cobe-marker-label[data-place-id][data-place-id="turkey"]{--label-x:-62px}
+ .about-cobe-marker-label[data-place-id][data-place-id="iraq"]{--label-x:-60px;--label-y:8px}
+ .about-cobe-marker-label[data-place-id][data-place-id="dubai"]{--label-x:58px;--label-y:-12px}
+ .about-cobe-marker-label[data-place-id][data-place-id="saudi-arabia"]{--label-x:0px;--label-y:48px}
+}
+
+
+/* Emphasize the role and craft only while the introduction is hovered. */
+.hero-support-copy .hero-opening-word{transition:opacity 160ms ease}
+@media(hover:hover) and (pointer:fine){
+ .hero-opening-title .hero-support-copy:hover .hero-opening-word:not(.hero-hover-keep){opacity:.5}
+}
+@media(prefers-reduced-motion:reduce){
+ .hero-support-copy .hero-opening-word{transition:none}
+}
+
+.hero-ai-label{opacity:1;transition:opacity 160ms ease}
+@media(hover:hover) and (pointer:fine){
+ .hero-opening-title .hero-support-copy:hover .hero-ai-label{opacity:.5}
+}
+@media(prefers-reduced-motion:reduce){
+ .hero-ai-label{transition:none}
+}
+
+/* Treat each About paragraph as an independent focus block. */
+section[aria-label="Story"] p.type-body{
+ font-weight:400;
+ transition:opacity 200ms ease,font-weight 200ms ease;
+}
+@media(hover:hover) and (pointer:fine){
+ section[aria-label="Story"]:has(p.type-body:hover) p.type-body:not(:hover){opacity:.5}
+ section[aria-label="Story"] p.type-body:hover{opacity:1;font-weight:600}
+}
+@media(prefers-reduced-motion:reduce){
+ section[aria-label="Story"] p.type-body{transition:opacity 120ms ease}
+}
+
+
+/* Sound is always on: hide the UI sound toggle buttons. */
+button[aria-label="Enable UI sound"],
+button[aria-label="Disable UI sound"],
+button[aria-label="Enable hero sound"],
+button[aria-label="Disable hero sound"]{display:none !important}
+
+
+/* Sticky opening bar: no gap above the bar when it sticks to the top on scroll (all pages). */
+div.sticky.top-0{padding-top:0 !important}
+
+/* ===== Work card hover/tooltip + lightbox ===== */
+
+/* Purple gradient tooltip for the big Hamhoush "Visit" card */
+.case-study-hover-cursor.cursor-pill-purple .case-study-hover-cursor__pill {
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #6366f1 100%);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 8px 24px -10px rgba(124, 58, 237, 0.65);
+}
+
+/* Full-screen image lightbox */
+#work-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 10, 12, 0.86);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.22s ease;
+  cursor: zoom-out;
+}
+#work-lightbox-overlay[data-open="true"] { opacity: 1; }
+#work-lightbox-overlay[data-open="false"] { pointer-events: none; }
+
+#work-lightbox-inner {
+  max-width: min(92vw, 1400px);
+  max-height: 86vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#work-lightbox-inner img {
+  max-width: 100%;
+  max-height: 86vh;
+  border-radius: 14px;
+  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.6);
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+#work-lightbox-close {
+  position: absolute;
+  top: max(20px, env(safe-area-inset-top));
+  right: max(20px, env(safe-area-inset-right));
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  padding: 0;
+}
+#work-lightbox-close::before,
+#work-lightbox-close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+}
+#work-lightbox-close::before { transform: translate(-50%, -50%) rotate(45deg); }
+#work-lightbox-close::after { transform: translate(-50%, -50%) rotate(-45deg); }
+#work-lightbox-close:hover { background: rgba(255, 255, 255, 0.18); }
+
+/* ===== Testimonial name/role block: keep text clear of the portrait ===== */
+.testimonial-name-block {
+  max-width: 50%;
+  padding-right: 1rem;
+}
+
+/* ===== Design x Engineering workflow bars ===== */
+.workflow-bar {
+  border-radius: 0;
+}
+.workflow-bar-visual .workflow-bar:hover {
+  filter: brightness(1.35);
+}
